@@ -55,8 +55,8 @@ EB_Error_Code hook_begin_wave(EB_Book *book, EB_Appendix*, void *data, EB_Hook_C
     .offset = argv[5]
   };
   static char filename[1024];
-  printf("%dx%d.wav\n", argv[2], argv[3]);
-  int len = snprintf(filename, 1024, "%dx%d.wav", argv[2], argv[3]);
+  /* printf("%dx%d.wav\n", argv[2], argv[3]); */
+  int len = snprintf(filename, 1024, "audio/%dx%d.wav", argv[2], argv[3]);
 
   EB_Error_Code ecode = eb_set_binary_wave(book, &spos, &epos);
   if (ecode != EB_SUCCESS)
