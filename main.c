@@ -172,7 +172,7 @@ int main(int argc, char *argv[]) {
             if (text[i] == '\x01') {
               mode = 0;
               printf("\n");
-              break;
+              continue;
             }
             putchar(text[i]);
           }
